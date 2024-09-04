@@ -70,12 +70,15 @@ namespace LogWriterMeow
 
     public static class Logger
     {
-        private static string LogFilePath => Path.Combine(Plugin.Instance.Config.LogFilePath, $"{Server.Port}.txt");
+        private static string LogFilePath => Path.Combine(Plugin.Instance.Config.LogFilePath, $"ServerLog-{Server.Port}.txt");
 
         private static void WriteLog(string log)
         {
             try
             {
+                if (!File.Exists(Plugin.Instance.Config.LogFilePath))
+                    Directory.CreateDirectory(Plugin.Instance.Config.LogFilePath);
+
                 if (!File.Exists(LogFilePath))
                     File.WriteAllText(LogFilePath, "Log file created at " + DateTime.Now.ToString("f"));
                 
@@ -202,16 +205,22 @@ namespace LogWriterMeow
     {
         public static string FormatLog(LogType type, string rawMessage, string source = null)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new StringBuilder(60);
             stringBuilder.Append(DateTime.Now.ToString(@"hh\:mm\:ss"));
-            
-            if(!string.IsNullOrEmpty(source))
-                stringBuilder.Append("[").Append(source).Append("]");
 
             stringBuilder
                 .Append("[")
                 .Append(type.ToString())
-                .Append("]")
+                .Append("]");
+
+            if (!string.IsNullOrEmpty(source))
+                stringBuilder
+                    .Append("[")
+                    .Append(source)
+                    .Append("]");
+
+            stringBuilder
+                .Append(" ")
                 .Append(rawMessage);
 
             return stringBuilder.ToString();

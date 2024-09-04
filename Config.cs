@@ -15,6 +15,6 @@ namespace LogWriterMeow
         public bool Debug { get; set; } = false;
 
         public bool PrintLogOntoConsole { get; set; } = false;
-        public string LogFilePath { get; set; } = Paths.Log;
+        public string LogFilePath { get; set; } = Path.Combine(Paths.Exiled, "Logs");
     }
 }
