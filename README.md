@@ -2,6 +2,7 @@
 ### Designed for Meow Servers~
 - [English](https://github.com/MeowServer/LogWritterMeow/tree/main)
 - [中文](https://github.com/MeowServer/LogWritterMeow/blob/main/README_zh.md)
+- [Brazilian](https://github.com/MeowServer/LogWritterMeow/blob/main/README_Br.md)
 # LogWritterMeow
 An Exiled log system plugin based on the file. 
 # Installation
