@@ -1,7 +1,7 @@
 ### Meow服务器设计~
 - [English](https://github.com/MeowServer/LogWritterMeow/tree/main)
 - [中文](https://github.com/MeowServer/LogWritterMeow/blob/main/README_zh.md)
-- [Brazilian](https://github.com/MeowServer/LogWritterMeow/blob/main/README_Br.md)
+- [Português](https://github.com/MeowServer/LogWritterMeow/blob/main/README_Br.md)
 # 日志读写
 这是一个Exiled框架下，基于文件的日志记录器
 # 安装
