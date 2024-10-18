@@ -2,7 +2,7 @@
 ### Projetado para os Servidores Meow~
 - [English](https://github.com/MeowServer/LogWritterMeow/tree/main)
 - [中文](https://github.com/MeowServer/LogWritterMeow/blob/main/README_zh.md)
-- [Brazilian](https://github.com/MeowServer/LogWritterMeow/blob/main/README_Br.md)
+- [Português](https://github.com/MeowServer/LogWritterMeow/blob/main/README_Br.md)
 # LogWritterMeow
 Um sistema de registro (logs) do Exiled baseado no arquivo.
 # Instalação
